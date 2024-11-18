@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoanController;
+use App\Http\Controllers\RepaymentController;
 
 
 //Default route
@@ -23,3 +24,5 @@ Route::put('api/loans/{loan}/{lender_id}', [LoanController::class, 'update']);
 
 // Route to delete an existing loan, with lender ID verification
 Route::delete('api/loans/{loan}/{lender_id}', [LoanController::class, 'destroy']);
+
+Route::put('api/repayments', [RepaymentController::class, 'store']);
