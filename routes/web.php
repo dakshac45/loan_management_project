@@ -25,4 +25,6 @@ Route::put('api/loans/{loan}/{lender_id}', [LoanController::class, 'update']);
 // Route to delete an existing loan, with lender ID verification
 Route::delete('api/loans/{loan}/{lender_id}', [LoanController::class, 'destroy']);
 
-Route::put('api/repayments', [RepaymentController::class, 'store']);
+Route::get('api/repayments', [RepaymentController::class, 'index']);
+
+Route::post('api/repayments', [RepaymentController::class, 'store']);

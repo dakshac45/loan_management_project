@@ -4,10 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Models\Loan;
 use App\Models\User;
+use App\Models\Repayment;
 use Illuminate\Http\Request;
 
 class RepaymentController extends Controller
 {
+
+    public function index()
+    {
+        $repayments = Repayment::all();
+        return response()->json($repayments);
+    }
 
     public function store(Request $request)
     {
